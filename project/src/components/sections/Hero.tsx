@@ -24,9 +24,9 @@ export default function Hero() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Elite{" "}
+              Employee{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
-                Employee Fleet
+                Elite Fleet
               </span>
             </h1>
 
