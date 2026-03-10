@@ -52,20 +52,20 @@ export default function Navbar() {
             <img
               src="/E2F.png"
               alt="E2F Logo"
-              className="h-20 md:h-24 w-auto"
+              className="h-12 md:h-16 w-auto"
             />
 
             <div className="flex flex-col justify-center leading-tight">
               <span
-                className={`text-2xl md:text-3xl font-bold ${
+                className={`text-xl md:text-2xl lg:text-3xl font-bold ${
                   isScrolled ? "text-navy-900" : "text-white"
                 }`}
               >
-                Employee Elite Fleet
+                Elite Employee Fleet
               </span>
 
               <span
-                className={`text-lg ${
+                className={`text-xl md:text-2xl ${
                   isScrolled ? "text-teal-600" : "text-teal-300"
                 }`}
                 style={{ fontFamily: "'Yesteryear', cursive" }}

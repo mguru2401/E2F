@@ -8,15 +8,19 @@ export default function Footer() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           <div className="space-y-4">
-            <img src="/E2F.png" alt="E2F Logo" className="h-12 w-auto" />
-            <h3 className="text-2xl font-bold">E2F</h3>
-            <p className="text-teal-300 font-medium">
+            <div className="flex items-center gap-4">
+              <img
+                src="/E2F.png"
+                alt="E2F Logo"
+                className="h-16 md:h-20 w-auto"
+              />
+            </div>
+            <span
+              className="text-sm md:text-base text-teal-600"
+              style={{ fontFamily: "'Yesteryear', cursive" }}
+            >
               Your Partner on the Road to Success
-            </p>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Comprehensive workforce solutions for talent acquisition, employee
-              transportation, and workplace wellness.
-            </p>
+            </span>
           </div>
 
           <div>
@@ -96,14 +100,13 @@ export default function Footer() {
                   className="text-teal-400 flex-shrink-0 mt-1"
                 />
                 <span className="text-gray-300 text-sm">
-                  Business District, Corporate Avenue
-                  <br />
-                  Mumbai, India
+                  5/34/41A, Kamarajar Nagar West, Palayampatti, Virudhunagar,
+                  Tamil Nadu, India
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-teal-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+91 123 456 7890</span>
+                <span className="text-gray-300 text-sm">+91 9176345451</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-teal-400 flex-shrink-0" />
@@ -137,7 +140,7 @@ export default function Footer() {
 
         <div className="border-t border-navy-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} E2F - Employee Elite Fleet. All rights
+            &copy; {currentYear} E2F - Elite Employee Fleet. All rights
             reserved.
           </p>
         </div>

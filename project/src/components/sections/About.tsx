@@ -50,7 +50,7 @@ export default function About() {
             About E2F
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            At E2F – Employee Elite Fleet, we believe that people are the
+            At E2F – Elite Employee Fleet, we believe that people are the
             driving force behind every successful organization. When employees
             are supported, empowered, and connected with the right
             opportunities, they perform at their best and contribute

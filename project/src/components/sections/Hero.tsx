@@ -23,15 +23,8 @@ export default function Hero() {
               </span>
             </div> */}
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Employee{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-emerald-400">
-                Elite Fleet
-              </span>
-            </h1>
-
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
-              " Comprehensive workforce solutions for talent acquisition,
+              "Comprehensive workforce solutions for talent acquisition,
               employee transportation, and workplace wellness. Building stronger
               teams for a better tomorrow."
             </p>

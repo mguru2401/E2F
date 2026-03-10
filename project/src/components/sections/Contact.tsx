@@ -80,12 +80,12 @@ export default function Contact() {
                   icon: MapPin,
                   title: "Visit Us",
                   content:
-                    "5/34/41A,Kamarajar nagar west,Palayampatti Corporate Avenue\nMumbai, India",
+                    "5/34/41A, Kamarajar Nagar West, Palayampatti,\nVirudhunagar, Tamil Nadu, India",
                 },
                 {
                   icon: Phone,
                   title: "Call Us",
-                  content: "+91 123 456 7890",
+                  content: "+91 9176345451",
                 },
                 {
                   icon: Mail,
