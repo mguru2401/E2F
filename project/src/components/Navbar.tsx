@@ -58,7 +58,7 @@ export default function Navbar() {
               <span
                 className={`text-xl md:text-2xl font-bold transition-colors ${isScrolled ? "text-navy-900" : "text-white"}`}
               >
-                E2F
+                Employee Elite Fleet
               </span>
               <span
                 className={`text-xs transition-colors ${isScrolled ? "text-teal-600" : "text-teal-300"}`}
