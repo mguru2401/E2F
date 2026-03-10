@@ -48,7 +48,7 @@ export default function WhyE2F() {
           <div className="bg-gradient-to-br from-navy-700 to-navy-900 rounded-2xl p-8 text-white shadow-xl h-full flex flex-col justify-center">
             <h3 className="text-2xl font-bold mb-6">Our Commitment</h3>
             <p className="text-lg leading-relaxed mb-6">
-              At E2F – Elite Employee Fleet, we are committed to being more than
+              At E2F – Employee Elite Fleet, we are committed to being more than
               just a service provider. We aim to be a trusted partner that
               supports organizations and employees every step of the way.
             </p>

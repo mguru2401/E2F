@@ -46,25 +46,29 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           <a
             href="#home"
-            className="flex items-center space-x-3"
+            className="flex items-center gap-4"
             onClick={(e) => handleClick(e, "#home")}
           >
             <img
               src="/E2F.png"
               alt="E2F Logo"
-              className="h-20 md:h-24 w-auto drop-shadow-lg"
+              className="h-20 md:h-24 w-auto"
             />
-            <div className="flex flex-col">
+
+            <div className="flex flex-col justify-center leading-tight">
               <span
-                className={`text-xl md:text-2xl font-bold transition-colors ${isScrolled ? "text-navy-900" : "text-white"}`}
+                className={`text-2xl md:text-3xl font-bold ${
+                  isScrolled ? "text-navy-900" : "text-white"
+                }`}
               >
                 Employee Elite Fleet
               </span>
+
               <span
-                className={`text-sm italic font-medium transition-colors ${
+                className={`text-lg ${
                   isScrolled ? "text-teal-600" : "text-teal-300"
                 }`}
-                style={{ fontFamily: "'Poppins', cursive" }}
+                style={{ fontFamily: "'Yesteryear', cursive" }}
               >
                 Your Partner on the Road to Success
               </span>

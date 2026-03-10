@@ -1,26 +1,28 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import Section from '../Section';
-import SectionTitle from '../SectionTitle';
-import AnimatedCard from '../AnimatedCard';
-import Button from '../Button';
-import { ContactForm } from '../../types';
+import { useState } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import Section from "../Section";
+import SectionTitle from "../SectionTitle";
+import AnimatedCard from "../AnimatedCard";
+import Button from "../Button";
+import { ContactForm } from "../../types";
 
 export default function Contact() {
   const [formData, setFormData] = useState<ContactForm>({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    service: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -31,21 +33,23 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitMessage('');
+    setSubmitMessage("");
 
     setTimeout(() => {
-      setSubmitMessage('Thank you for your interest! We will contact you soon.');
+      setSubmitMessage(
+        "Thank you for your interest! We will contact you soon.",
+      );
       setIsSubmitting(false);
       setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        service: '',
-        message: '',
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        service: "",
+        message: "",
       });
 
-      setTimeout(() => setSubmitMessage(''), 5000);
+      setTimeout(() => setSubmitMessage(""), 5000);
     }, 1500);
   };
 
@@ -64,8 +68,9 @@ export default function Contact() {
                 Let's Partner for Success
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Whether you need talent acquisition, employee transportation, or wellness programs,
-                we're here to help. Reach out to discuss how E2F can support your organization.
+                Whether you need talent acquisition, employee transportation, or
+                wellness programs, we're here to help. Reach out to discuss how
+                E2F can support your organization.
               </p>
             </div>
 
@@ -73,18 +78,19 @@ export default function Contact() {
               {[
                 {
                   icon: MapPin,
-                  title: 'Visit Us',
-                  content: 'Business District, Corporate Avenue\nMumbai, India',
+                  title: "Visit Us",
+                  content:
+                    "5/34/41A,Kamarajar nagar west,Palayampatti Corporate Avenue\nMumbai, India",
                 },
                 {
                   icon: Phone,
-                  title: 'Call Us',
-                  content: '+91 123 456 7890',
+                  title: "Call Us",
+                  content: "+91 123 456 7890",
                 },
                 {
                   icon: Mail,
-                  title: 'Email Us',
-                  content: 'info@e2f.com',
+                  title: "Email Us",
+                  content: "info@e2f.com",
                 },
               ].map((item, index) => (
                 <div
@@ -95,8 +101,12 @@ export default function Contact() {
                     <item.icon size={24} className="text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy-900 mb-1">{item.title}</h4>
-                    <p className="text-gray-600 text-sm whitespace-pre-line">{item.content}</p>
+                    <h4 className="font-semibold text-navy-900 mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 text-sm whitespace-pre-line">
+                      {item.content}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -123,10 +133,16 @@ export default function Contact() {
         </AnimatedCard>
 
         <AnimatedCard delay={200}>
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-xl">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white rounded-2xl p-8 shadow-xl"
+          >
             <div className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-navy-900 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold text-navy-900 mb-2"
+                >
                   Full Name *
                 </label>
                 <input
@@ -143,7 +159,10 @@ export default function Contact() {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-navy-900 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-semibold text-navy-900 mb-2"
+                  >
                     Email *
                   </label>
                   <input
@@ -159,7 +178,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-navy-900 mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-semibold text-navy-900 mb-2"
+                  >
                     Phone
                   </label>
                   <input
@@ -175,7 +197,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-semibold text-navy-900 mb-2">
+                <label
+                  htmlFor="company"
+                  className="block text-sm font-semibold text-navy-900 mb-2"
+                >
                   Company Name
                 </label>
                 <input
@@ -190,7 +215,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-sm font-semibold text-navy-900 mb-2">
+                <label
+                  htmlFor="service"
+                  className="block text-sm font-semibold text-navy-900 mb-2"
+                >
                   Service of Interest
                 </label>
                 <select
@@ -209,7 +237,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-navy-900 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold text-navy-900 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -237,11 +268,14 @@ export default function Contact() {
                 size="lg"
               >
                 {isSubmitting ? (
-                  'Sending...'
+                  "Sending..."
                 ) : (
                   <>
                     Send Message
-                    <Send className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                    <Send
+                      className="ml-2 group-hover:translate-x-1 transition-transform"
+                      size={20}
+                    />
                   </>
                 )}
               </Button>

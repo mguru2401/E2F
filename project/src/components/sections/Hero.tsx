@@ -16,12 +16,12 @@ export default function Hero() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10 pt-24 pb-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-8 animate-fade-in-up">
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+            {/* <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
               <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
               <span className="text-sm font-medium">
                 Your Partner on the Road to Success
               </span>
-            </div>
+            </div> */}
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Employee{" "}
@@ -31,9 +31,9 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
-              Comprehensive workforce solutions for talent acquisition, employee
-              transportation, and workplace wellness. Building stronger teams
-              for a better tomorrow.
+              " Comprehensive workforce solutions for talent acquisition,
+              employee transportation, and workplace wellness. Building stronger
+              teams for a better tomorrow."
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
