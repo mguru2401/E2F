@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const navigation = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Industries', href: '#industries' },
-  { name: 'Why E2F', href: '#why-e2f' },
-  { name: 'Resources', href: '#resources' },
-  { name: 'Contact', href: '#contact' },
+  { name: "Home", href: "#home" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Industries", href: "#industries" },
+  { name: "Why E2F", href: "#why-e2f" },
+  { name: "Resources", href: "#resources" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -20,15 +20,18 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 20);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
     }
   };
@@ -36,25 +39,31 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-lg py-3'
-          : 'bg-transparent py-5'
+        isScrolled ? "bg-white shadow-lg py-3" : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center space-x-3" onClick={(e) => handleClick(e, '#home')}>
+          <a
+            href="#home"
+            className="flex items-center space-x-3"
+            onClick={(e) => handleClick(e, "#home")}
+          >
             <img
-              src="/WhatsApp_Image_2026-03-09_at_10.51.10_PM.jpeg"
+              src="/E2F.png"
               alt="E2F Logo"
               className="h-10 md:h-12 w-auto"
             />
             <div className="flex flex-col">
-              <span className={`text-xl md:text-2xl font-bold transition-colors ${isScrolled ? 'text-navy-900' : 'text-white'}`}>
+              <span
+                className={`text-xl md:text-2xl font-bold transition-colors ${isScrolled ? "text-navy-900" : "text-white"}`}
+              >
                 E2F
               </span>
-              <span className={`text-xs transition-colors ${isScrolled ? 'text-teal-600' : 'text-teal-300'}`}>
-                Elite Employee Fleet
+              <span
+                className={`text-xs transition-colors ${isScrolled ? "text-teal-600" : "text-teal-300"}`}
+              >
+                Employee Elite Fleet
               </span>
             </div>
           </a>
@@ -66,7 +75,7 @@ export default function Navbar() {
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
                 className={`text-sm font-medium transition-all duration-300 hover:text-teal-600 relative group ${
-                  isScrolled ? 'text-gray-700' : 'text-white'
+                  isScrolled ? "text-gray-700" : "text-white"
                 }`}
               >
                 {item.name}
@@ -75,7 +84,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              onClick={(e) => handleClick(e, '#contact')}
+              onClick={(e) => handleClick(e, "#contact")}
               className="px-6 py-2 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-full font-medium hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               Get Started
@@ -85,7 +94,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? 'text-navy-900' : 'text-white'
+              isScrolled ? "text-navy-900" : "text-white"
             }`}
             aria-label="Toggle menu"
           >
@@ -108,7 +117,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                onClick={(e) => handleClick(e, '#contact')}
+                onClick={(e) => handleClick(e, "#contact")}
                 className="mx-4 px-6 py-3 bg-gradient-to-r from-teal-600 to-emerald-600 text-white rounded-lg font-medium text-center hover:shadow-lg transition-all duration-300"
               >
                 Get Started

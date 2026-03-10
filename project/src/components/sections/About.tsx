@@ -50,7 +50,7 @@ export default function About() {
             About E2F
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            E2F – Elite Employee Fleet is a comprehensive workforce solutions
+            E2F – Employee Elite Fleet is a comprehensive workforce solutions
             provider dedicated to supporting organizations and employees at
             every stage of their professional journey. We specialize in Talent
             Acquisition, Employee Transportation, and Employee Wellbeing
