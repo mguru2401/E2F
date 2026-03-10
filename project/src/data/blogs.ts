@@ -1,0 +1,55 @@
+import { BlogPost } from '../types';
+
+export const blogPosts: BlogPost[] = [
+  {
+    id: '1',
+    title: 'The Future of Employee Transportation: Trends for 2026',
+    excerpt: 'Explore how technology and sustainability are reshaping employee commute solutions in the modern workplace.',
+    author: 'Sarah Johnson',
+    date: '2026-03-05',
+    category: 'Transportation',
+    image: 'https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=800',
+    readTime: '5 min read',
+  },
+  {
+    id: '2',
+    title: '5 Key Strategies for Effective Talent Acquisition',
+    excerpt: 'Learn proven methods to attract and retain top talent in today\'s competitive job market.',
+    author: 'Michael Chen',
+    date: '2026-03-01',
+    category: 'Talent',
+    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+    readTime: '7 min read',
+  },
+  {
+    id: '3',
+    title: 'Employee Wellness Programs That Actually Work',
+    excerpt: 'Discover wellness initiatives that boost productivity and employee satisfaction in the workplace.',
+    author: 'Dr. Emily Roberts',
+    date: '2026-02-28',
+    category: 'Wellness',
+    image: 'https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg?auto=compress&cs=tinysrgb&w=800',
+    readTime: '6 min read',
+  },
+  {
+    id: '4',
+    title: 'How to Build a Productive Remote Work Culture',
+    excerpt: 'Best practices for maintaining team cohesion and productivity in hybrid work environments.',
+    author: 'David Martinez',
+    date: '2026-02-25',
+    category: 'Workplace',
+    image: 'https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=800',
+    readTime: '8 min read',
+  },
+  {
+    id: '5',
+    title: 'The ROI of Employee Engagement Programs',
+    excerpt: 'Understanding the tangible benefits of investing in employee engagement and satisfaction.',
+    author: 'Lisa Anderson',
+    date: '2026-02-20',
+    category: 'HR Strategy',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+    readTime: '5 min read',
+  },
+ 
+];
