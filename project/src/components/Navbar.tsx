@@ -52,7 +52,7 @@ export default function Navbar() {
             <img
               src="/E2F.png"
               alt="E2F Logo"
-              className="h-10 md:h-12 w-auto"
+              className="h-20 md:h-24 w-auto drop-shadow-lg"
             />
             <div className="flex flex-col">
               <span
@@ -61,9 +61,12 @@ export default function Navbar() {
                 Employee Elite Fleet
               </span>
               <span
-                className={`text-xs transition-colors ${isScrolled ? "text-teal-600" : "text-teal-300"}`}
+                className={`text-sm italic font-medium transition-colors ${
+                  isScrolled ? "text-teal-600" : "text-teal-300"
+                }`}
+                style={{ fontFamily: "'Poppins', cursive" }}
               >
-                Employee Elite Fleet
+                Your Partner on the Road to Success
               </span>
             </div>
           </a>
