@@ -7,7 +7,7 @@ const navigation = [
   { name: "Services", href: "#services" },
   { name: "Industries", href: "#industries" },
   { name: "Why E2F", href: "#why-e2f" },
-  { name: "Resources", href: "#resources" },
+  // { name: "Resources", href: "#resources" },
   { name: "Contact", href: "#contact" },
 ];
 

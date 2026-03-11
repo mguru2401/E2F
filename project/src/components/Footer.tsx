@@ -34,7 +34,7 @@ export default function Footer() {
                 "Services",
                 "Industries",
                 "Why E2F",
-                "Resources",
+                // "Resources",
                 "Contact",
               ].map((item) => (
                 <li key={item}>
