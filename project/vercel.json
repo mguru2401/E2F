@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://www.e2fgroup.com/(.*)",
+      "destination": "https://e2fgroup.com/$1",
+      "permanent": true
+    }
+  ]
+}
