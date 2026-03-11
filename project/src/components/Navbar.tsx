@@ -65,7 +65,7 @@ export default function Navbar() {
               </span>
 
               <span
-                className={`text-xl md:text-2xl ${
+                className={`text-sm sm:text-base md:text-xl ${
                   isScrolled ? "text-teal-600" : "text-teal-300"
                 }`}
                 style={{ fontFamily: "'Yesteryear', cursive" }}
