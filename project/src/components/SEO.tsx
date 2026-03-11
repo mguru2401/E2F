@@ -9,10 +9,10 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = "E2F - Employee Elite Fleet",
-  description = "Your Partner on the Road to Success. Comprehensive workforce solutions for talent acquisition, employee transportation, and workplace wellness.",
-  keywords = "employee transportation, talent acquisition, employee wellness, workforce solutions, HR services, fleet management",
-  image = "https://bolt.new/static/og_default.png",
+  title = "E2F | Elite Employee Fleet | Your Partner on the Road to Success",
+  description = "E2F (Elite Employee Fleet) provides comprehensive workforce solutions including talent acquisition, employee transportation, and workplace wellness programs.",
+  keywords = "E2F, employee transportation, talent acquisition, employee wellness, workforce solutions, HR services, fleet management, Elite Employee Fleet, E2F Group",
+  image = "https://e2fgroup.com/E2F.png",
   url = window.location.href,
 }: SEOProps) {
   useEffect(() => {
