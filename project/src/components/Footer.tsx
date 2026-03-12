@@ -1,4 +1,12 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Facebook,
+} from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -122,13 +130,19 @@ export default function Footer() {
               </h5>
               <div className="flex space-x-4">
                 {[
-                  { icon: Linkedin, href: "#" },
-                  { icon: Twitter, href: "#" },
-                  { icon: Facebook, href: "#" },
+                  // { icon: Linkedin, href: "#" },
+                  {
+                    icon: Instagram,
+                    href: "https://www.instagram.com/eliteemployeefleet/",
+                  },
+                  { icon: Twitter, href: "https://x.com/e2fgroup" },
+                  // { icon: Facebook, href: "#" },
                 ].map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-navy-700 flex items-center justify-center hover:bg-teal-600 transition-all duration-300 transform hover:scale-110"
                     aria-label="Social media"
                   >
