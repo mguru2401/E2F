@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center gap-4">
               <img
                 src="/E2F.png"
-                alt="E2F Logo"
+                alt="Elite Employee Fleet (E2F) Logo"
                 className="h-16 md:h-20 w-auto"
               />
             </div>
@@ -110,7 +110,9 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-teal-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">info@e2f.com</span>
+                <span className="text-gray-300 text-sm">
+                  career@e2fgroup.com
+                </span>
               </li>
             </ul>
 

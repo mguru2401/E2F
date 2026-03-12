@@ -14,6 +14,9 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl relative z-10 pt-24 pb-12">
+        <h1 className="sr-only">
+          Elite Employee Fleet (E2F) - Workforce Solutions
+        </h1>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-8 animate-fade-in-up">
             {/* <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">

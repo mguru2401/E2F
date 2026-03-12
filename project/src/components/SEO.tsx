@@ -9,9 +9,9 @@ interface SEOProps {
 }
 
 export default function SEO({
-  title = "E2F | Elite Employee Fleet | Your Partner on the Road to Success",
-  description = "E2F (Elite Employee Fleet) provides comprehensive workforce solutions including talent acquisition, employee transportation, and workplace wellness programs.",
-  keywords = "E2F, employee transportation, talent acquisition, employee wellness, workforce solutions, HR services, fleet management, Elite Employee Fleet, E2F Group",
+  title = "Elite Employee Fleet (E2F) | Your Partner on the Road to Success",
+  description = "Elite Employee Fleet (E2F) provides expert talent acquisition, employee transportation, and wellness solutions to build stronger workforces.",
+  keywords = "Elite Employee Fleet, E2F, employee transportation, talent acquisition, employee wellness, workforce solutions, fleet management",
   image = "https://e2fgroup.com/E2F.png",
   url = window.location.href,
 }: SEOProps) {

@@ -90,7 +90,7 @@ export default function Contact() {
                 {
                   icon: Mail,
                   title: "Email Us",
-                  content: "info@e2f.com",
+                  content: "career@e2fgroup.com",
                 },
               ].map((item, index) => (
                 <div

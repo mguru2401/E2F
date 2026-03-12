@@ -51,7 +51,7 @@ export default function Navbar() {
           >
             <img
               src="/E2F.png"
-              alt="E2F Logo"
+              alt="Elite Employee Fleet (E2F) Logo"
               className="h-12 md:h-16 w-auto"
             />
 
