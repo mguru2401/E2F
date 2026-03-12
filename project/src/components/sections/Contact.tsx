@@ -35,22 +35,44 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitMessage("");
 
-    setTimeout(() => {
-      setSubmitMessage(
-        "Thank you for your interest! We will contact you soon.",
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/eliteemployeefleet@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            ...formData,
+            _subject: `New Contact Form Submission from ${formData.name}`,
+            _template: "table",
+          }),
+        },
       );
-      setIsSubmitting(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        service: "",
-        message: "",
-      });
 
+      if (response.ok) {
+        setSubmitMessage(
+          "Thank you for your interest! We will contact you soon.",
+        );
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: "",
+        });
+      } else {
+        setSubmitMessage("Something went wrong. Please try again later.");
+      }
+    } catch (error) {
+      setSubmitMessage("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
       setTimeout(() => setSubmitMessage(""), 5000);
-    }, 1500);
+    }
   };
 
   return (
@@ -229,10 +251,12 @@ export default function Contact() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all outline-none"
                 >
                   <option value="">Select a service</option>
-                  <option value="talent">Talent Acquisition</option>
-                  <option value="transport">Employee Transportation</option>
-                  <option value="wellness">Employee Wellness</option>
-                  <option value="all">All Services</option>
+                  <option value="talent_acquisition">Talent Acquisition</option>
+                  <option value="employee_transportation">
+                    Employee Transportation
+                  </option>
+                  <option value="employee_wellness">Employee Wellness</option>
+                  <option value="all_services">All Services</option>
                 </select>
               </div>
 
