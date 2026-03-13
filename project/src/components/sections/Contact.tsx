@@ -37,7 +37,7 @@ export default function Contact() {
 
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/eliteemployeefleet@gmail.com",
+        "https://formsubmit.co/ajax/hr@e2fgroup.com",
         {
           method: "POST",
           headers: {
@@ -48,6 +48,7 @@ export default function Contact() {
             ...formData,
             _subject: `New Contact Form Submission from ${formData.name}`,
             _template: "table",
+            _cc: "eliteemployeefleet@gmail.com",
           }),
         },
       );
@@ -108,30 +109,40 @@ export default function Contact() {
                   icon: Phone,
                   title: "Call Us",
                   content: "+91 9176345451",
+                  link: "tel:+919176345451",
                 },
                 {
                   icon: Mail,
                   title: "Email Us",
                   content: "career@e2fgroup.com",
+                  link: "mailto:career@e2fgroup.com",
                 },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <item.icon size={24} className="text-white" />
+              ].map((item, index) => {
+                const Card = (
+                  <div className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+                    <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <item.icon size={24} className="text-white" />
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold text-navy-900 mb-1">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-600 text-sm whitespace-pre-line">
+                        {item.content}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-navy-900 mb-1">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-600 text-sm whitespace-pre-line">
-                      {item.content}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+
+                return item.link ? (
+                  <a key={index} href={item.link} className="cursor-pointer">
+                    {Card}
+                  </a>
+                ) : (
+                  <div key={index}>{Card}</div>
+                );
+              })}
             </div>
 
             <div className="bg-gradient-to-br from-navy-700 to-navy-900 rounded-2xl p-6 text-white">
@@ -211,9 +222,19 @@ export default function Contact() {
                     id="phone"
                     name="phone"
                     value={formData.phone}
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, ""); // remove non-numbers
+                      if (value.length <= 10) {
+                        setFormData((prev) => ({
+                          ...prev,
+                          phone: value,
+                        }));
+                      }
+                    }}
+                    maxLength={10}
+                    pattern="[0-9]{10}"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-all outline-none"
-                    placeholder="+91 123 456 7890"
+                    placeholder="9876543210"
                   />
                 </div>
               </div>

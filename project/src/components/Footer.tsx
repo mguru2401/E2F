@@ -114,13 +114,22 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-teal-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">+91 9176345451</span>
+                <a
+                  href="tel:+919176345451"
+                  className="text-gray-300 text-sm hover:text-teal-400 transition-colors"
+                >
+                  +91 9176345451
+                </a>
               </li>
+
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-teal-400 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">
+                <a
+                  href="mailto:career@e2fgroup.com"
+                  className="text-gray-300 text-sm hover:text-teal-400 transition-colors"
+                >
                   career@e2fgroup.com
-                </span>
+                </a>
               </li>
             </ul>
 
