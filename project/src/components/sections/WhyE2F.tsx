@@ -73,7 +73,7 @@ export default function WhyE2F() {
         </AnimatedCard>
       </div>
 
-      <div>
+      {/* <div>
         <h3 className="text-2xl md:text-3xl font-bold text-navy-900 text-center mb-12">
           What Our Clients Say
         </h3>
@@ -111,7 +111,7 @@ export default function WhyE2F() {
             </AnimatedCard>
           ))}
         </div>
-      </div>
+      </div> */}
     </Section>
   );
 }

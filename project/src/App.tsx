@@ -19,7 +19,7 @@ function App() {
         <Services />
         <Industries />
         <About />
-        {/* <WhyE2F /> */}
+        <WhyE2F />
         {/* <Resources /> */}
         <Contact />
       </main>
