@@ -2,11 +2,10 @@ import {
   Mail,
   Phone,
   MapPin,
-  Linkedin,
   Twitter,
   Instagram,
-  Facebook,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,7 +23,7 @@ export default function Footer() {
               />
             </div>
             <span
-              className="text-sm md:text-base text-teal-600"
+              className="text-sm md:text-base text-teal-600 block"
               style={{ fontFamily: "'Yesteryear', cursive" }}
             >
               Your Partner on the Road to Success
@@ -32,25 +31,57 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-teal-300">
+            <h4 className="text-lg font-semibold mb-6 text-teal-300">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {[
-                "Home",
-                "About",
-                "Services",
-                "Industries",
-                "Why E2F",
-                // "Resources",
-                "Contact",
+                { name: "Home", href: "/#home", isHash: true },
+                { name: "About", href: "/#about", isHash: true },
+                { name: "Services", href: "/#services", isHash: true },
+                { name: "Industries", href: "/#industries", isHash: true },
+                { name: "Why E2F", href: "/#why-e2f", isHash: true },
+                { name: "Careers", href: "/careers", isHash: false },
+                { name: "Contact", href: "/#contact", isHash: true },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
+                  {item.isHash ? (
+                    <a
+                      href={item.href}
+                      className="text-gray-300 hover:text-teal-300 transition-colors duration-300 text-sm md:text-base"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="text-gray-300 hover:text-teal-300 transition-colors duration-300 text-sm md:text-base"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-6 text-teal-300">
+              Our Services
+            </h4>
+            <ul className="space-y-3">
+              {[
+                "Talent Acquisition",
+                "Employee Transportation",
+                "Employee Wellness",
+                "Workforce Planning"
+              ].map((service) => (
+                <li key={service}>
                   <a
-                    href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    className="text-gray-300 hover:text-teal-300 transition-colors duration-300"
+                    href="/#services"
+                    className="text-gray-300 hover:text-teal-300 transition-colors duration-300 text-sm md:text-base"
                   >
-                    {item}
+                    {service}
                   </a>
                 </li>
               ))}
@@ -58,56 +89,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-teal-300">
-              Our Services
-            </h4>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#services"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-300"
-                >
-                  Talent Acquisition
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-300"
-                >
-                  Employee Transportation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-300"
-                >
-                  Employee Wellness
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-gray-300 hover:text-teal-300 transition-colors duration-300"
-                >
-                  Workforce Planning
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-semibold mb-4 text-teal-300">
+            <h4 className="text-lg font-semibold mb-6 text-teal-300">
               Contact Us
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <MapPin
                   size={20}
                   className="text-teal-400 flex-shrink-0 mt-1"
                 />
-                <span className="text-gray-300 text-sm">
+                <span className="text-gray-300 text-sm leading-relaxed">
                   5/34/41A, Kamarajar Nagar West, Palayampatti, Virudhunagar,
                   Tamil Nadu, India
                 </span>
@@ -133,26 +124,24 @@ export default function Footer() {
               </li>
             </ul>
 
-            <div className="mt-6">
-              <h5 className="text-sm font-semibold mb-3 text-teal-300">
+            <div className="mt-8">
+              <h5 className="text-sm font-semibold mb-4 text-teal-300 uppercase tracking-wider">
                 Follow Us
               </h5>
               <div className="flex space-x-4">
                 {[
-                  // { icon: Linkedin, href: "#" },
                   {
                     icon: Instagram,
                     href: "https://www.instagram.com/eliteemployeefleet/",
                   },
                   { icon: Twitter, href: "https://x.com/e2fgroup" },
-                  // { icon: Facebook, href: "#" },
                 ].map((social, index) => (
                   <a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-navy-700 flex items-center justify-center hover:bg-teal-600 transition-all duration-300 transform hover:scale-110"
+                    className="w-10 h-10 rounded-full bg-navy-700 flex items-center justify-center hover:bg-teal-600 transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
                     aria-label="Social media"
                   >
                     <social.icon size={18} />
@@ -164,7 +153,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-navy-700 mt-12 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-xs md:text-sm">
             &copy; {currentYear} E2F - Elite Employee Fleet. All rights
             reserved.
           </p>

@@ -1,30 +1,24 @@
-import SEO from "./components/SEO";
-import Navbar from "./components/Navbar";
-import Hero from "./components/sections/Hero";
-import Services from "./components/sections/Services";
-import Industries from "./components/sections/Industries";
-import About from "./components/sections/About";
-import WhyE2F from "./components/sections/WhyE2F";
-import Resources from "./components/sections/Resources";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Careers from "./pages/Careers";
+import JobDetails from "./pages/JobDetails";
+import Layout from "./components/Layout";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <SEO />
-      <Navbar />
-      <main>
-        <Hero />
-        <Services />
-        <Industries />
-        <About />
-        <WhyE2F />
-        {/* <Resources /> */}
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="careers">
+            <Route index element={<Careers />} />
+            <Route path=":jobId" element={<JobDetails />} />
+          </Route>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

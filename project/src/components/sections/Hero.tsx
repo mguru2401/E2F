@@ -59,31 +59,34 @@ export default function Hero() {
                   icon: Users,
                   label: "Talent Acquisition",
                   color: "from-blue-400 to-blue-600",
+                  link: "#services",
                 },
                 {
                   icon: Bus,
                   label: "Transportation",
                   color: "from-teal-400 to-teal-600",
+                  link: "#services",
                 },
                 {
                   icon: Heart,
                   label: "Employee Wellness",
                   color: "from-emerald-400 to-emerald-600",
+                  link: "#services",
                 },
               ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center text-center space-y-2 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105"
-                >
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center`}
-                  >
-                    <item.icon size={24} className="text-white" />
+                <a key={index} href={item.link}>
+                  <div className="flex flex-col items-center text-center space-y-2 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 cursor-pointer">
+                    <div
+                      className={`w-12 h-12 rounded-lg bg-gradient-to-br ${item.color} flex items-center justify-center`}
+                    >
+                      <item.icon size={24} className="text-white" />
+                    </div>
+
+                    <span className="text-xs font-medium text-gray-300">
+                      {item.label}
+                    </span>
                   </div>
-                  <span className="text-xs font-medium text-gray-300">
-                    {item.label}
-                  </span>
-                </div>
+                </a>
               ))}
             </div>
           </div>
