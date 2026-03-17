@@ -27,7 +27,7 @@ export const jobs: Job[] = [
     image: "/carrers/apollo_tyres_job.png",
     code: "AP-NAPS-001",
     description: "Urgent hiring for NAPS Trainees. Eligibility: ITI, Diploma, Arts. Attractive salary and benefits included.",
-    longDescription: "Join Apollo Tyres as a NAPS Trainee and start your career in the tire manufacturing industry. We offer a comprehensive training program with competitive compensation and extensive benefits for dedicated individuals.",
+    longDescription: "Join Apollo Tyres as a NAPS Trainee and start your career in the tire manufacturing industry. It offers a comprehensive training program with competitive compensation and extensive benefits for dedicated individuals.",
     eligibility: ["ITI", "Diploma", "Arts"],
     salary: [
       { label: "ITI Graduates", value: "₹17,500 Per Month" },
