@@ -1,6 +1,7 @@
 import { MapPin, Send, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { jobs, Job } from "../data/jobs";
+import SEO from "../components/SEO";
 
 export default function Careers() {
   const handleApply = (job: Job, e: React.MouseEvent) => {
@@ -17,6 +18,10 @@ export default function Careers() {
 
   return (
     <div className="pt-24 min-h-screen bg-gray-50">
+      <SEO 
+        title="Careers | Elite Employee Fleet (E2F)" 
+        description="Join Elite Employee Fleet and build your career with industry leaders like Apollo Tyres, Ashok Leyland, and Caterpillar. Explore our latest opportunities."
+      />
       {/* Hero Section */}
       <section className="bg-navy-900 text-white py-20 px-4 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-transparent pointer-events-none" />

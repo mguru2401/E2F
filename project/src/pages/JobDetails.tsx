@@ -12,6 +12,7 @@ import {
   Award
 } from "lucide-react";
 import { jobs } from "../data/jobs";
+import SEO from "../components/SEO";
 
 export default function JobDetails() {
   const { jobId } = useParams<{ jobId: string }>();
@@ -40,6 +41,10 @@ export default function JobDetails() {
 
   return (
     <div className="pt-24 min-h-screen bg-gray-50 pb-20">
+      <SEO 
+        title={`${job.title} at ${job.company} | Careers | E2F`}
+        description={`Apply for the ${job.title} position at ${job.company} through Elite Employee Fleet. ${job.description}`}
+      />
       {/* Dynamic Header */}
       <section className="bg-navy-900 text-white py-12 md:py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-transparent pointer-events-none" />
