@@ -1,10 +1,4 @@
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Twitter,
-  Instagram,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -74,7 +68,7 @@ export default function Footer() {
                 "Talent Acquisition",
                 "Employee Transportation",
                 "Employee Wellness",
-                "Workforce Planning"
+                "Workforce Planning",
               ].map((service) => (
                 <li key={service}>
                   <a
@@ -106,10 +100,10 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-teal-400 flex-shrink-0" />
                 <a
-                  href="tel:+919176345451"
+                  href="tel:04566-223955"
                   className="text-gray-300 text-sm hover:text-teal-400 transition-colors"
                 >
-                  +91 9176345451
+                  04566-223955
                 </a>
               </li>
 

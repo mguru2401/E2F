@@ -108,8 +108,8 @@ export default function Contact() {
                 {
                   icon: Phone,
                   title: "Call Us",
-                  content: "+91 9176345451",
-                  link: "tel:+919176345451",
+                  content: "04566-223955",
+                  link: "tel:04566-223955",
                 },
                 {
                   icon: Mail,
